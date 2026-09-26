@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "db:setup": "node scripts/setupDatabase.js",
+    "db:seed:categories": "node scripts/seedCategories.js"
   },
   "keywords": [],
   "author": "",
