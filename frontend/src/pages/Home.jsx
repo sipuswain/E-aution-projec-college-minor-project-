@@ -1,6 +1,19 @@
+import React, { useEffect } from "react";
+import {testApi} from "../services/api";
 import { Link } from "react-router-dom";
 
 function Home() {
+  useEffect(() => {
+    testApi()
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("API Error:", error);
+      });
+  }, []);
+
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
